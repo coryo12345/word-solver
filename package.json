@@ -1,0 +1,22 @@
+{
+  "name": "wordsolver",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "vue": "^3.2.47",
+    "vuetify": "^3.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "prettier": "^3.2.5",
+    "vite": "^4.3.9"
+  }
+}
