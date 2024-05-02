@@ -38,11 +38,6 @@ async function solve() {
         variant="outlined"
         hide-details
       />
-      <v-checkbox
-        v-model="requireAllLetters"
-        label="Require all letters to be used"
-        hide-details
-      />
       <v-text-field
         v-model="minLength"
         label="Minimum length for matched words"
