@@ -4,7 +4,6 @@ import { findWords } from "../lib/solver";
 import WordList from "./WordList.vue";
 
 const lettersStr = ref("");
-const requireAllLetters = ref(false);
 const minLength = ref(3);
 const loading = ref(false);
 
@@ -14,11 +13,7 @@ const wordsList = ref({});
 async function solve() {
   loading.value = true;
   await nextTick();
-  const words = await findWords(
-    lettersStr.value.split(""),
-    requireAllLetters.value,
-    minLength.value,
-  );
+  const words = await findWords(lettersStr.value.split(""), minLength.value);
 
   const wordsByLength = words.reduce((prev, curr) => {
     if (!prev[curr.length]) {

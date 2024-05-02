@@ -1,10 +1,10 @@
 /**
  * 
  * @param {string[]} letters 
- * @param {boolean} requireAll
+ * @param {number} minLength
  * @returns {string[]}
  */
-export async function findWords(letters, requireAll, minLength) {
+export async function findWords(letters, minLength) {
     const letterCounts = getLetterObj(letters.join(''));
     
     const words = (await getWords()).filter(w => w.length >= minLength);
@@ -19,7 +19,6 @@ export async function findWords(letters, requireAll, minLength) {
                 fail = true;
             }
         }
-        // TODO implement requireAll
         if (!fail) {
             matchedWords.push(word)
         }
