@@ -44,6 +44,7 @@ async function solve() {
         type="number"
         hide-details
         variant="outlined"
+        class="mt-4"
       />
       <v-btn color="primary" class="mt-2" @click="solve">Submit</v-btn>
     </section>
